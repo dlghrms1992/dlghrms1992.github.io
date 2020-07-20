@@ -1,0 +1,124 @@
+
+.trip{
+    position: relative;
+ 
+    display: inline-grid;
+    grid-template-columns: 300px;
+    grid-template-rows: 210px 210px 80px;
+    grid-template-areas:"image" "text" "stats" ;
+    border-radius: 18px;
+    box-shadow: 5px 5px rgba(0,0,0,0.6);
+    background: white;
+    text-align: center;
+    margin: 20px;
+    margin-top: 200px;
+    float: left;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+
+.trip-image{
+    grid-area: image;
+    background: url("./projectimg/taiwan.jpg");
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-size: cover;
+
+}
+.trip-text{
+    grid-area: text;
+    margin: 25px;
+
+}
+.trip-text{
+    color: grey;
+    font-size: 15px;
+    font-weight: 300;
+}
+.trip-text h2{
+    margin-top: 0px;
+    font-size: 28px;
+}
+.trip-stats{
+    grid-area: stats;
+}
+.trip2-image{
+    grid-area: image;
+    background: url("./projectimg/italy.jpg");
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-size: cover;
+
+}
+.trip2-text{
+    grid-area: text;
+    margin: 25px;
+
+}
+.trip2-text{
+    color: grey;
+    font-size: 15px;
+    font-weight: 300;
+}
+.trip2-text h2{
+    margin-top: 0px;
+    font-size: 28px;
+}
+.trip2-stats{
+    grid-area: stats;
+}
+.trip3-image{
+ 
+    grid-area: image;
+    background: url("./projectimg/spain.jpg");
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-size: cover;
+
+}
+.trip3-text{
+    grid-area: text;
+    margin: 25px;
+
+}
+.trip3-text{
+    color: grey;
+    font-size: 15px;
+    font-weight: 300;
+}
+.trip3-text h2{
+    margin-top: 0px;
+    font-size: 28px;
+}
+.trip3-stats{
+    grid-area: stats;
+}
+.trip4-image{
+    grid-area: image;
+    background: url("./projectimg/hotsprings.jpg");
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-size: cover;
+
+}
+.trip4-text{
+    grid-area: text;
+    margin: 25px;
+
+}
+.trip4-text{
+    color: grey;
+    font-size: 15px;
+    font-weight: 300;
+}
+.trip4-text h2{
+    margin-top: 0px;
+    font-size: 28px;
+}
+.trip4-stats{
+    grid-area: stats;
+}
+.trip:hover{
+    transform: scale(1.2);
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+}

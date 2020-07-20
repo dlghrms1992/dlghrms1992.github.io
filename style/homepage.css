@@ -1,0 +1,195 @@
+.logo{
+    /* width: 100px;
+    height: 100px; */
+    display: inline;
+    position: relative;
+    top: 50px;
+    left:50px;
+    
+}
+
+.login{
+    width: 320px;
+
+    background-color: #000;
+    background-color: rgba(3, 3, 3, 0.5);
+    margin: 0 auto 100px;
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    padding: 70px 30px;
+}
+
+.warning{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: -50px;
+    left:calc(50% - 50px);
+    
+}
+.registerChange {
+    position: relative;
+    z-index: 1;
+    max-width: 360px;
+    margin: 0 auto ;
+    
+}
+.registerChange .register-form{
+    display: none;
+}
+
+#container{
+    box-sizing: border-box;
+ 
+    height: 100vh;
+    width: 95vw;
+}
+h1{
+    margin: 0px;
+    padding: 0px 0px 20px;
+    text-align: center;
+    font-size: 22px;
+}
+.login p{
+     margin: 0px;
+     padding: 0px;
+     font-weight:bold ;
+}
+.login input{
+    width: 100%;
+    margin-bottom: 20px;
+    
+}
+.login input[type="text"], input[type="password"]{
+        border: none;
+        border-bottom: 1px solid #fff;
+        background: transparent;
+        outline: none;
+        height: 40px;
+        color: #fff;
+        font-size: 16px;
+}
+
+.login input[type="submit"]{
+    border: 3px solid #000;
+    outline: none;
+    height: 40px;
+    background: #f8b600;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+}
+.login input[type="submit"]:hover{
+    cursor: pointer;
+    background: #ff8b07;
+    color: #000;
+}
+
+.login a{
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 20px;
+    color: darkgrey;
+
+}
+.login a:hover{
+   color: #ff8b07;
+}
+ 
+.menubar ul {
+    float: right;
+    list-style-type: none;
+    margin-top: 25px;
+}
+.menubar ul li {
+    display: inline-block;
+}
+.menubar ul li.active a{
+    background-color: #ff8b07;
+    color: darkgray;
+}
+.menubar ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 20px;
+    border: 1px solid transparent;
+    transition: 0.5s ease;
+
+}
+.menubar ul li a:hover {
+    background-color: #ff8b07;
+    color: darkgray;
+
+}
+.profile{
+    width: 700px;
+    height: 400px;
+    overflow: hidden;
+}
+.me{
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+.inputChange{
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+}
+.inputChange label{
+    font-size: 20px;
+    text-align: center;
+    color: #fff;
+}
+.key{
+    width: 100px;
+    height: 30px;
+    border: 2px solid #000;
+    background: #f8b600;
+    border-radius: 20px;
+    margin: 6px;
+    cursor: pointer;
+    transition: 0.4s;
+} 
+.key:hover{
+    background-color: #ff8b07;
+    color: darkgray;
+}
+input[name="me"]{
+  position: absolute;
+  visibility: hidden;
+}
+.change{
+    width: 500%;
+    height: 100%;
+    display: flex;
+}
+.photo{
+    width: 20%;
+    transition: 0.6s;
+}
+.photo img{
+    width: 100%;
+    height: 100%;
+}
+#go1:checked ~ .s1{
+    margin-left: 0;
+}
+#go2:checked ~ .s1{
+    margin-left: -20%;
+}
+#go3:checked ~ .s1{
+    margin-left: -40%;
+}
+#go4:checked ~ .s1{
+    margin-left: -40%;
+}
+#go5:checked ~ .s1{
+    margin-left: -40%;
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style/homepage.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <style>
+        *{
+            font-family: 'Nanum Gothic', sans-serif;
+        }
+        .note{
+            position: relative;
+            left: 340px;     
+            top: 235px;
+            /* background: url("./projectimg/profile1.png") ; */
+            background-size: cover;
+            background-position: center;
+            z-index: 0;
+            width: 1029px;
+            height: 548px;
+        
+         }
+         body{
+            margin: 0;
+            padding: 0;
+            background: url("./projectimg/bcg.jpg");
+            background-size: cover;
+            background-position: center;
+            
+
+        }
+    </style>
+</head>
+<body>
+    <div id ="container">
+        <header id="header">
+            <nav class="menubar">
+                   
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li class="active"><a href="#">Introduce</a></li>
+                        <li><a href="trip.html">trip</a></li>
+                        <li><a href="roadmap.html">roadmap</a></li>
+                        <!-- <li><a href="member.html">member</a></li> -->
+                    </ul>
+                </nav>
+               
+            </header>
+            <section id="section">
+                <article>  
+                    <img src="./projectimg/profile1.png" class="note" alt="">
+                    <div class="profile me">
+                    <div class="change">
+                    <input type="radio" name="me" id="go1"></input>
+                    <input type="radio" name="me" id="go2" checked></input>
+                    <input type="radio" name="me" id="go3"></input>
+                    <div class="photo s1"><img src="projectimg/me.jpg" alt=""></div>
+                    <div class="photo"><img src="projectimg/walk.jpg" alt=""></div>
+                    <div class="photo"><img src="projectimg/Billiards.jpg" alt=""></div>
+                </div>
+                    <div class="inputChange">
+                        <label for="go1" class="key">me</label>
+                        <label for="go2" class="key">walk</label>
+                        <label for="go3" class="key">billiards</label>
+                    </div>
+                </div>         
+            </article>
+        </section>
+        
+    </div>
+
+</body>
+</html>

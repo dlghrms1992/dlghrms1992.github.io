@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>homepageproject</title>
+    <script src="js/jquery-3.5.1.js"></script>
+    <link rel="stylesheet" href="./style/homepage.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <style>
+      *{
+         font-family: 'Nanum Gothic', sans-serif;
+        }
+        body{
+            margin: 0;
+            padding: 0;
+            background: url("./projectimg/main2.jpg");
+            background-size: cover;
+            background-position: center;
+            overflow: hidden;
+        }
+
+    </style>
+    <script>
+        
+        if(window.localStorage){
+            console.log("성공!");
+        }else{
+            console.log("실패!");
+
+        }
+        window.onload = function(){
+            var elt = document.getElementById("register");
+            elt.onsubmit = function(){ 
+                
+                console.log(elt+"눌럿따");
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="logo">
+
+        <img src="./projectimg/logo.png" class="warning">
+    </div>
+    
+    <div class="login" id="login">
+        <img src="./projectimg/logo.png" class="warning">
+        <div class="registerChange">
+            <form  name="memberJoinFrm" id="register" class="register-form">
+                <p>Id</p>
+                <input type="text" id="registerId" placeholder="user Id" required>
+                <p>Name</p>
+                <input type="text" id="registerName" placeholder="user Name" required>
+                <p>Password</p>
+                <input type="password" id="registerPass" placeholder="password" required>
+                <p>PasswordCheck</p>
+                <input type="password" id="registerPassch" placeholder="passworCheck"required>
+                <p>Email</p>
+                <input type="text" id="registerEmail" placeholder="email" required>
+                <input type="submit" value="Create" onclick="create();" >
+                <a href="#">Already your id?</a>
+            </form>
+            
+            <form name="memberLoginFrm" class="login-form">
+                <p>UserId</p>
+                <input type="text" id="userId" placeholder="Enter UserName">
+                <p>UserPassword</p>
+                <input type="password" id="userPass"  placeholder="Enter UserPassword">
+                <input type="submit" value="Login" onclick="login();">
+                <a href="#">You're not a member yet?</a>
+            </form>
+            
+        </div>
+    </div>
+    
+    <div id="container">
+        <header id="header">
+            <nav class="menubar">
+                
+                <ul>
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="introduce.html">Introduce</a></li>
+                    <li><a href="trip.html">trip</a></li>
+                    <li><a href="roadmap.html">roadmap</a></li>
+                    <!-- <li><a href="member.html">member</a></li> -->
+                    </ul>
+                </nav>
+                 <div class="title">
+                     <h1 id="d1">WellCome!!!</h1>
+                 </div>         
+        </header>
+    
+    </div>
+    
+    <script type="text/javascript">
+        var formChange = $('.login a').click(function() {
+            $('form').animate({height:"toggle", opacity:"toggle"},"slow");    
+        });
+     
+    console.log(registerPass);
+
+        function create() {
+            var userIdval = registerId.value.trim();
+            var userNameval = registerName.value.trim();
+            var userPassval = registerPass.value.trim();
+            var userPCval = registerPassch.value.trim();
+            var userEmailval = registerEmail.value.trim();
+            var newUser = {
+                userId : userIdval,
+                userNmae : userNameval,
+                userPass : userPassval,
+                userEmail : userEmailval,
+                registerDate : Date.now()
+            };
+    
+            console.log(registerId);
+            console.log(newUser);
+            console.log(typeof(newUser));
+            
+            //storage
+            var storageUser = JSON.parse(localStorage.getItem("strogeUser"));
+            console.log(storageUser);
+            if(storageUser == null) storageUser = [];
+            storageUser.push(newUser);//js
+            var jsonStr = JSON.stringify(storageUser);//json
+            localStorage.setItem("storageUser", jsonStr);//json
+            
+            console.log(storageUser);
+            console.log(jsonStr);
+            console.log(typeof(storageUser));
+
+    
+            return false;
+        };
+        
+        function login() {
+            var userId = document.getElementById("userId").value;
+            var userPass = document.getElementById("userPass").value;
+            var storageUser = JSON.parse(localStorage.getItem("storageUser"));
+            for(var i = 0 ; i<storageUser.length; i++){
+                if(userId == storageUser[i].userId && userPass == storageUser[i].userPass){
+                    alert(storageUser[i].userNmae+ "님 로그인 성공!");
+                    return true;
+                }else{
+                        alert("로그인 실패 ");
+                    return false;
+                }
+                
+            }
+            create();
+            console.log(strogeUser);
+            return false;
+        };
+       
+
+        //제출로인한 값확인 안됨
+    //     var memberJoinFrm = document.querySelector("[name=memberJoinFrm]");
+    //     memberJoinFrm.onsubmit = function(){
+    //         var userIdval = registerId.value.trim();
+    //         var userNameval = registerName.value.trim();
+    //         var userPassval = registerPass.value.trim();
+    //         var userPCval = registerPassch.value.trim();
+    //         var userEmailval = registerEmail.value.trim();
+    //         var newUser = {
+    //             userId : userIdval,
+    //             userNmae : userNameval,
+    //             userPass : userPassval,
+    //             userEmail : userEmailval,
+    //             registerDate : Date.now()
+    //         }
+       
+    //             if(regsiterPass != regsiterPassch) {
+    //             alert("비밀번호가 일치 안함");
+    //             regsiterPass.select();
+    //             regsiterPass.focus();
+    //                 return false;
+    //              }
+    
+    //         for(var i = 0 ; i<storageUser.length ; i++) {
+    //             if(registerId == storageUser[i].userId){
+    //                 alert(registerId + "는 이미 존재함!");
+    //                 return false;
+    //             }else if(storageUser[i].regsiterPass <8){
+    //                 alert("비밀번호가 너무 적음");
+    //                 return false;
+    //             }
+    //         }
+    //         if(newUser == null) newUser = [];
+    //         storageUser.push(newUser);
+    //         console.log(registerId);
+    //         console.log(newUser);
+    //         console.log(typeof(newUser));
+    //         console.log(storageUser);
+    //         console.log(typeof(storageUser));
+           
+    //         // //storage
+    //         // var storageUser = JSON.parse(localStorage("strogeUser"));
+    //         // console.log("List"+strogeUserList);
+
+
+    
+    //         return false;
+    //    };
+
+        
+        
+   
+       console.log(memberJoinFrm);
+
+    
+    </script>
+</body>
+</html>
